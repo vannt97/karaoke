@@ -39,19 +39,52 @@
 
 <body>
 
-  <div id="app" class="w-full px-6">
-    <div class="pb-6 text-[#a3a3a3]">
-      <h1 class="text-center pb-1 font-bold pt-4 text-3xl">BÀI HÁT</h1>
-      <p class="font-medium text-center text-lg text-[#e4e4e7]">Em Yêu Anh</p>
+  <div id="app" class="relative w-full px-6 min-h-[100vh] overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-full">
+      <img class="h-full w-full object-cover blur-lg" src="hinh-nen-dien-thoai-mau-tim-cute-001.webp" alt="">
     </div>
-    <div class="w-[96%] mx-auto aspect-square">
-      <div class="w-full h-full bg-[#8b5cf6] rounded-full overflow-hidden spinner" style="box-shadow: 
+    <div class="absolute top-0 left-0 w-full h-full bg-black opacity-90"></div>
+    <div class="relative">
+      <div class="pb-6 text-[#a3a3a3]">
+        <h1 class="text-center pb-1 font-bold pt-4 text-3xl">BÀI HÁT</h1>
+        <p class="font-medium text-center text-lg text-[#e4e4e7]">Em Yêu Anh</p>
+      </div>
+      <div class="w-[96%] mx-auto">
+        <div class="relative z-1 aspect-square mb-10">
+          <div class="w-full h-full bg-[#8b5cf6] rounded-full overflow-hidden spinner" style="box-shadow: 
     0 0 20px rgba(139, 92, 246, 0.6),
     0 0 40px rgba(139, 92, 246, 0.4),
     0 0 80px rgba(139, 92, 246, 0.3);">
-        <img src="hinh-nen-dien-thoai-mau-tim-cute-001.webp" alt="" class="w-full h-full object-cover" style="background-position: 0% 0%;">
+            <img src="hinh-nen-dien-thoai-mau-tim-cute-001.webp" alt="" class="w-full h-full object-cover"
+              style="background-position: 0% 0%;">
+          </div>
+        </div>
+        <div class="relative z-20">
+          <div class="relative w-full h-[4px] bg-[#a3a3a3]">
+            <div class="absolute top-0 left-0 h-full w-1/2 bg-white"></div>
+          </div>
+          <div class="absolute top-[100%] left-0 text-sm pt-1">
+            0:00
+          </div>
+          <div class="absolute top-[100%] right-0 text-sm pt-1">
+            0:00
+          </div>
+        </div>
+        <div class="mt-10">
+          <p class="font-bold">Câu hiện tại</p>
+          <div class="text-[#00f0ff]">
+            Anh vui sao nước mắt cứ tuôn trào
+          </div>
+        </div>
+         <div class="mt-10">
+          <p class="font-bold">Câu hiện tại</p>
+          <div class="text-[#00f0ff]">
+            Anh vui sao nước mắt cứ tuôn trào
+          </div>
+        </div>
       </div>
     </div>
+
   </div>
   <script type="module" src="/src/main.js"></script>
 </body>
