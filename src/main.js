@@ -37,7 +37,7 @@ const songs = {
 
     },
     "dia_nguc_tran_gian": {
-        song_name: "Địa Ngục Trần Gian",
+        song_name: "Địa Ngục Trần Gian - Remix",
         background_image: "nang-tho-bac-ninh-dep-ngot-ngao-don-giang-sinh-somdocx-1638204418966.jpeg.webp",
         background: "#FDFDFD",
         background_opacity: "0.9",
@@ -80,7 +80,7 @@ const songs = {
         track_color: "#F8F4F0",
     },
     "dia_nguc_tran_gian_anh_vui": {
-        song_name: "Địa Ngục Trần Gian + Anh Vui",
+        song_name: "Địa Ngục Trần Gian + Anh Vui - Remix",
         background_image: "camfashion.vn-wp-content-uploads-2022-09-_concept-chup-anh-noel-giang-sinh-dep-ben-cay-thong-noel.jpg",
         background: "#0F0F0F",
         background_opacity: "0.9",
@@ -119,12 +119,51 @@ const songs = {
             {
                 text: "Em biến nơi anh thành địa ngục trần gian",
             },
+            {
+                text: "Anh vui đến nổi nghẹn ngào",
+            },
+            {
+                text: "Nhìn người ta cầm nhẫn cưới trao"
+            },
+            {
+                text: "Anh cũng có chút tự hào"
+            },
+            {
+                text: "Vì người mình thương hạnh phúc nhường nào"
+            },
+            {
+                text: "Áo cưới em màu trắng tinh"
+            },
+            {
+                text: "Cô gái anh thật rất xinh"
+            },
+            {
+                text: "Giật mình cứ ngỡ anh đứng cạnh em trong lễ cưới"
+            },
+            {
+                text: "Anh vui sao nước mắt cứ tuôn trào"
+            },
+            {
+                text: "Chẳng phải như thế quá tốt hay sao"
+            },
+            {
+                text: "Anh ta đáng giá nhường nào"
+            },
+            {
+                text: "Ngược lại nhìn anh trông chẳng ra sao"
+            },
+            {
+                text: "Cũng đúng thôi !"
+            },
+            {
+                text: "Anh làm gì , xứng đáng với em "
+            }
         ],
         track_color: "rgba(212,175,55,0.1)",
     }
 }
 
-const song = songs["dia_nguc_tran_gian"];
+const song = songs["dia_nguc_tran_gian_anh_vui"];
 
 function handleTimeUpdate() {
     const tl = gsap.timeline();
@@ -160,6 +199,7 @@ function handleTimeUpdate() {
         tl.to('.current-lyric:nth-child(1)', {
             duration: 2.4, onStart: () => {
                 gsap.to('.current-lyric:nth-child(1) .current-lyric-color', { backgroundPositionX: '-100%', duration: 3.4 })
+                gsap.to('.current-lyric:nth-child(2) .current-lyric-color', { backgroundPositionX: '-100%', duration: 1.8, delay: 2.2 })
             }
         })
             .to('.current-lyric:nth-child(1)', { display: 'none', duration: 0 })
@@ -167,7 +207,7 @@ function handleTimeUpdate() {
             .to('.next-lyric:nth-child(2)', { display: 'block', duration: 0 })
             .to('.current-lyric:nth-child(2)', {
                 display: 'block', duration: 1, ease: "power2.out", onStart: () => {
-                    gsap.to('.current-lyric:nth-child(2) .current-lyric-color', { backgroundPositionX: '-100%', duration: 1.8 })
+                    gsap.to('.current-lyric:nth-child(3) .current-lyric-color', { backgroundPositionX: '-100%', duration: 2.8, delay: 1 })
                 }
             })
             .to('.current-lyric:nth-child(2)', { display: 'none', duration: 0 })
@@ -175,7 +215,8 @@ function handleTimeUpdate() {
             .to('.next-lyric:nth-child(3)', { display: 'block', duration: 0 })
             .to('.current-lyric:nth-child(3)', {
                 display: 'block', duration: 1.9, ease: "power2.out", onStart: () => {
-                    gsap.to('.current-lyric:nth-child(3) .current-lyric-color', { backgroundPositionX: '-100%', duration: 2.8 })
+                    gsap.to('.current-lyric:nth-child(4) .current-lyric-color', { backgroundPositionX: '-100%', duration: 2.6, delay: 1.6 })
+
                 }
             })
             .to('.current-lyric:nth-child(3)', { display: 'none', duration: 0 })
@@ -183,7 +224,8 @@ function handleTimeUpdate() {
             .to('.next-lyric:nth-child(4)', { display: 'block', duration: 0 })
             .to('.current-lyric:nth-child(4)', {
                 display: 'block', duration: 1.4, ease: "power2.out", onStart: () => {
-                    gsap.to('.current-lyric:nth-child(4) .current-lyric-color', { backgroundPositionX: '-100%', duration: 1.8 })
+                    gsap.to('.current-lyric:nth-child(5) .current-lyric-color', { backgroundPositionX: '-100%', duration: 3, delay: 1.2 })
+
                 }
             })
             .to('.current-lyric:nth-child(4)', { display: 'none', duration: 0 })
@@ -191,7 +233,8 @@ function handleTimeUpdate() {
             .to('.next-lyric:nth-child(5)', { display: 'block', duration: 0 })
             .to('.current-lyric:nth-child(5)', {
                 display: 'block', duration: 1.8, ease: "power2.out", onStart: () => {
-                    gsap.to('.current-lyric:nth-child(5) .current-lyric-color', { backgroundPositionX: '-100%', duration: 2.6 })
+                    gsap.to('.current-lyric:nth-child(6) .current-lyric-color', { backgroundPositionX: '-100%', duration: 2.6, delay: 1.6 })
+
                 }
             })
             .to('.current-lyric:nth-child(5)', { display: 'none', duration: 0 })
@@ -199,7 +242,8 @@ function handleTimeUpdate() {
             .to('.next-lyric:nth-child(6)', { display: 'block', duration: 0 })
             .to('.current-lyric:nth-child(6)', {
                 display: 'block', duration: 1.8, ease: "power2.out", onStart: () => {
-                    gsap.to('.current-lyric:nth-child(6) .current-lyric-color', { backgroundPositionX: '-100%', duration: 2.6 })
+                    gsap.to('.current-lyric:nth-child(7) .current-lyric-color', { backgroundPositionX: '-100%', duration: 4, delay: 1.6 })
+
                 }
             })
             .to('.current-lyric:nth-child(6)', { display: 'none', duration: 0 })
@@ -207,7 +251,8 @@ function handleTimeUpdate() {
             .to('.next-lyric:nth-child(7)', { display: 'block', duration: 0 })
             .to('.current-lyric:nth-child(7)', {
                 display: 'block', duration: 2.4, ease: "power2.out", onStart: () => {
-                    gsap.to('.current-lyric:nth-child(7) .current-lyric-color', { backgroundPositionX: '-100%', duration: 2.8 })
+                    gsap.to('.current-lyric:nth-child(8) .current-lyric-color', { backgroundPositionX: '-100%', duration: 4, delay: 2.2 })
+
                 }
             })
             .to('.current-lyric:nth-child(7)', { display: 'none', duration: 0 })
@@ -215,7 +260,6 @@ function handleTimeUpdate() {
             .to('.next-lyric:nth-child(8)', { display: 'block', duration: 0 })
             .to('.current-lyric:nth-child(8)', {
                 display: 'block', duration: 2, ease: "power2.out", onStart: () => {
-                    gsap.to('.current-lyric:nth-child(8) .current-lyric-color', { backgroundPositionX: '-100%', duration: 4 })
                 }
             })
 
@@ -224,11 +268,10 @@ function handleTimeUpdate() {
     }
 
     if (song.song_name === "Địa Ngục Trần Gian + Anh Vui") {
-        tl.to('.current-lyric:nth-child(1)', {
-            duration: 2.4, onStart: () => {
-                gsap.to('.current-lyric:nth-child(1) .current-lyric-color', { backgroundPositionX: '-100%', duration: 3.4 })
-            }
-        })
+        tl.to('.current-lyric:nth-child(1) .current-lyric-color', { backgroundPositionX: '-100%', duration: 3.4 })
+            .to('.current-lyric:nth-child(1)', {
+                duration: 2.4
+            },)
             .to('.current-lyric:nth-child(1)', { display: 'none', duration: 0 })
             .to('.next-lyric:nth-child(1)', { display: 'none', duration: 0 })
             .to('.next-lyric:nth-child(2)', { display: 'block', duration: 0 })
@@ -243,14 +286,16 @@ function handleTimeUpdate() {
             .to('.current-lyric:nth-child(3)', {
                 display: 'block', duration: 1.9, ease: "power2.out", onStart: () => {
                     gsap.to('.current-lyric:nth-child(3) .current-lyric-color', { backgroundPositionX: '-100%', duration: 2.8 })
-                }
+                },
             })
             .to('.current-lyric:nth-child(3)', { display: 'none', duration: 0 })
             .to('.next-lyric:nth-child(3)', { display: 'none', duration: 0 })
-            .to('.next-lyric:nth-child(4)', { display: 'block', duration: 0 })
+            .to('.next-lyric:nth-child(4)', {
+                display: 'block', duration: 0, onComplete: () => {
+                }
+            })
             .to('.current-lyric:nth-child(4)', {
                 display: 'block', duration: 1.4, ease: "power2.out", onStart: () => {
-                    gsap.to('.current-lyric:nth-child(4) .current-lyric-color', { backgroundPositionX: '-100%', duration: 1.8 })
                 }
             })
             .to('.current-lyric:nth-child(4)', { display: 'none', duration: 0 })
@@ -281,8 +326,125 @@ function handleTimeUpdate() {
             .to('.next-lyric:nth-child(7)', { display: 'none', duration: 0 })
             .to('.next-lyric:nth-child(8)', { display: 'block', duration: 0 })
             .to('.current-lyric:nth-child(8)', {
-                display: 'block', duration: 2, ease: "power2.out", onStart: () => {
+                display: 'block', duration: 4, ease: "power2.out", onStart: () => {
                     gsap.to('.current-lyric:nth-child(8) .current-lyric-color', { backgroundPositionX: '-100%', duration: 4 })
+                }
+            })
+            .to('.current-lyric:nth-child(8)', { display: 'none', duration: 0 })
+            .to('.next-lyric:nth-child(8)', { display: 'none', duration: 0 })
+            .to('.next-lyric:nth-child(9)', { display: 'block', duration: 0 })
+            .to('.current-lyric:nth-child(9)', {
+                display: 'block', duration: 2, ease: "power2.out", onStart: () => {
+                    gsap.to('.current-lyric:nth-child(9) .current-lyric-color', { backgroundPositionX: '-100%', duration: 4 })
+
+                }
+            })
+            .to('.current-lyric:nth-child(9)', { display: 'none', duration: 0 })
+            .to('.next-lyric:nth-child(9)', { display: 'none', duration: 0 })
+            .to('.next-lyric:nth-child(10)', { display: 'block', duration: 0 })
+            .to('.current-lyric:nth-child(10)', {
+                display: 'block', duration: 2, ease: "power2.out", onStart: () => {
+                    gsap.to('.current-lyric:nth-child(10) .current-lyric-color', { backgroundPositionX: '-100%', duration: 2 })
+
+                }
+            })
+            .to('.current-lyric:nth-child(10)', { display: 'none', duration: 0 })
+            .to('.next-lyric:nth-child(10)', { display: 'none', duration: 0 })
+            .to('.next-lyric:nth-child(11)', { display: 'block', duration: 0 })
+            .to('.current-lyric:nth-child(11)', {
+                display: 'block', duration: 1.4, ease: "power2.out", onStart: () => {
+                    gsap.to('.current-lyric:nth-child(11) .current-lyric-color', { backgroundPositionX: '-100%', duration: 1.4 })
+
+                }
+            })
+            .to('.current-lyric:nth-child(11)', { display: 'none', duration: 0 })
+            .to('.next-lyric:nth-child(11)', { display: 'none', duration: 0 })
+            .to('.next-lyric:nth-child(12)', { display: 'block', duration: 0 })
+            .to('.current-lyric:nth-child(12)', {
+                display: 'block', duration: 1.6, ease: "power2.out", onStart: () => {
+                    gsap.to('.current-lyric:nth-child(12) .current-lyric-color', { backgroundPositionX: '-100%', duration: 1.6 })
+
+                }
+            })
+            .to('.current-lyric:nth-child(12)', { display: 'none', duration: 0 })
+            .to('.next-lyric:nth-child(12)', { display: 'none', duration: 0 })
+            .to('.next-lyric:nth-child(13)', { display: 'block', duration: 0 })
+            .to('.current-lyric:nth-child(13)', {
+                display: 'block', duration: 2, ease: "power2.out", onStart: () => {
+                    // gsap.to('.current-lyric:nth-child(13) .current-lyric-color', { backgroundPositionX: '-100%', duration:4 })
+
+                }
+            })
+            .to('.current-lyric:nth-child(13)', { display: 'none', duration: 0 })
+            .to('.next-lyric:nth-child(13)', { display: 'none', duration: 0 })
+            .to('.next-lyric:nth-child(14)', { display: 'block', duration: 0 })
+            .to('.current-lyric:nth-child(14)', {
+                display: 'block', duration: 2, ease: "power2.out", onStart: () => {
+                    gsap.to('.current-lyric:nth-child(14) .current-lyric-color', { backgroundPositionX: '-100%', duration: 4 })
+
+                }
+            })
+            .to('.current-lyric:nth-child(14)', { display: 'none', duration: 0 })
+            .to('.next-lyric:nth-child(14)', { display: 'none', duration: 0 })
+            .to('.next-lyric:nth-child(15)', { display: 'block', duration: 0 })
+            .to('.current-lyric:nth-child(15)', {
+                display: 'block', duration: 2.8, ease: "power2.out", onStart: () => {
+                    gsap.to('.current-lyric:nth-child(15) .current-lyric-color', { backgroundPositionX: '-100%', duration: 4 })
+
+                }
+            })
+            .to('.current-lyric:nth-child(15)', { display: 'none', duration: 0 })
+            .to('.next-lyric:nth-child(15)', { display: 'none', duration: 0 })
+            .to('.next-lyric:nth-child(16)', { display: 'block', duration: 0 })
+            .to('.current-lyric:nth-child(16)', {
+                display: 'block', duration: 2, ease: "power2.out", onStart: () => {
+                    gsap.to('.current-lyric:nth-child(16) .current-lyric-color', { backgroundPositionX: '-100%', duration: 4 })
+
+                }
+            })
+            .to('.current-lyric:nth-child(16)', { display: 'none', duration: 0 })
+            .to('.next-lyric:nth-child(16)', { display: 'none', duration: 0 })
+            .to('.next-lyric:nth-child(17)', { display: 'block', duration: 0 })
+            .to('.current-lyric:nth-child(17)', {
+                display: 'block', duration: 1.8, ease: "power2.out", onStart: () => {
+                    gsap.to('.current-lyric:nth-child(17) .current-lyric-color', { backgroundPositionX: '-100%', duration: 3.6 })
+
+                }
+            })
+            .to('.current-lyric:nth-child(17)', { display: 'none', duration: 0 })
+            .to('.next-lyric:nth-child(17)', { display: 'none', duration: 0 })
+            .to('.next-lyric:nth-child(18)', { display: 'block', duration: 0 })
+            .to('.current-lyric:nth-child(18)', {
+                display: 'block', duration: 1.8, ease: "power2.out", onStart: () => {
+                    gsap.to('.current-lyric:nth-child(18) .current-lyric-color', { backgroundPositionX: '-100%', duration: 3.6 })
+
+                }
+            })
+            .to('.current-lyric:nth-child(18)', { display: 'none', duration: 0 })
+            .to('.next-lyric:nth-child(18)', { display: 'none', duration: 0 })
+            .to('.next-lyric:nth-child(19)', { display: 'block', duration: 0 })
+            .to('.current-lyric:nth-child(19)', {
+                display: 'block', duration: 1.6, ease: "power2.out", onStart: () => {
+                    gsap.to('.current-lyric:nth-child(19) .current-lyric-color', { backgroundPositionX: '-100%', duration: 3.2 })
+
+                }
+            })
+            .to('.current-lyric:nth-child(19)', { display: 'none', duration: 0 })
+            .to('.next-lyric:nth-child(19)', { display: 'none', duration: 0 })
+            .to('.next-lyric:nth-child(20)', { display: 'block', duration: 0 })
+            .to('.current-lyric:nth-child(20)', {
+                display: 'block', duration: 2, ease: "power2.out", onStart: () => {
+                    gsap.to('.current-lyric:nth-child(20) .current-lyric-color', { backgroundPositionX: '-100%', duration: 4 })
+
+                }
+            })
+            .to('.current-lyric:nth-child(20)', { display: 'none', duration: 0 })
+            .to('.next-lyric:nth-child(20)', { display: 'none', duration: 0 })
+            .to('.next-lyric:nth-child(21)', { display: 'block', duration: 0 })
+            .to('.current-lyric:nth-child(21)', {
+                display: 'block', duration: 2, ease: "power2.out", onStart: () => {
+                    gsap.to('.current-lyric:nth-child(21) .current-lyric-color', { backgroundPositionX: '-100%', duration: 4 })
+
                 }
             })
     }
@@ -488,7 +650,6 @@ const renderNextLyrics = () => {
     `).join('');
     document.getElementById('next-lyrics').innerHTML = html;
 }
-
 
 renderNextLyrics();
 renderLyrics();
