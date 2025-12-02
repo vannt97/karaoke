@@ -163,7 +163,7 @@ const songs = {
     }
 }
 
-const song = songs["dia_nguc_tran_gian_anh_vui"];
+const song = songs["dia_nguc_tran_gian"];
 
 function handleTimeUpdate() {
     const tl = gsap.timeline();
@@ -629,7 +629,7 @@ function formatTime(seconds) {
 const renderLyrics = () => {
     const html = song.lyrics.map((lyric, index) => `
         <div  class="current-lyric ${index == 0 ? 'inline-block' : 'hidden'}  text-xs font-bold red-sweep h-[20px] absolute top-0 left-0 w-full h-full">
-            <div class="absolute bottom-[110%] left-[80%]">${index+1}</div>      
+            <div class="hidden absolute bottom-[110%] left-[80%]">${index+1}</div>      
         <div style="font-weight: 900;
       color: ${song.accent_primary};
       background: linear-gradient(to right, ${song.text_primary} 50%, ${song.accent_primary} 50%);
