@@ -10,8 +10,8 @@ export const mainContent = (song) => {
         <p class="font-medium text-center text-lg" style="color: ${song.text_primary};">${song.song_name}</p>
       </div>
       <div class="w-[96%] mx-auto">
-        <div class="relative z-1 aspect-square mb-8">
-          <div id="disc" class="w-full h-full bg-white rounded-full overflow-hidden " style="box-shadow: 
+        <div id="disc_wrapper" class="relative z-1 aspect-square mb-8">
+          <div id="disc" class="relative w-full h-full bg-white rounded-full overflow-hidden " style="box-shadow: 
           ${song.box_shadow_disc};">
             <img src="${song.background_image}" alt=""
               class="w-full h-full ${song.img_class_name}" />

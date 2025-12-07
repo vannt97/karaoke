@@ -1,7 +1,7 @@
 import gsap from 'gsap';
 import './style.css'
 import { mainContent } from './content';
-import { playLyricDaQuenRoi, playLyricDiaNgucTranGian, playLyricDiaNgucTranGian2 } from './lyrics';
+import { playAnimationEverNight, playLyricDaQuenRoi, playLyricDiaNgucTranGian, playLyricDiaNgucTranGian2, playLyrics1800 } from './lyrics';
 import { SONGS } from './song';
 const songs = SONGS
 
@@ -21,6 +21,11 @@ function handleTimeUpdate() {
         playLyricDiaNgucTranGian2(tl)
     }
 
+    if(song.song_name === "bbno$ - 1-800 (ft. ironmouse)"){
+        playLyrics1800(tl);
+        const everNightTimeline = gsap.timeline();
+        playAnimationEverNight(everNightTimeline);
+    }
 
 }
 
@@ -74,16 +79,16 @@ function formatTime(seconds) {
 }
 
 const renderLyrics = () => {
-    const html = song.lyrics.map((lyric, index) => `
+    let html = song.lyrics.map((lyric, index) => `
         <div  class="current-lyric ${index == 0 ? 'inline-block' : 'hidden'}  text-xs font-bold red-sweep h-[20px] absolute top-0 left-0 w-full h-full">
             <div class="hidden absolute bottom-[110%] left-[80%]">${index + 1}</div>      
         <div style="font-weight: 900;
       color: ${song.accent_primary};
-      background: linear-gradient(to right, ${song.text_primary} 50%, ${song.accent_primary} 50%);
+      ${song.song_name !== "bbno$ - 1-800 (ft. ironmouse)" && `background: linear-gradient(to right, ${song.text_primary} 50%, ${song.accent_primary} 50%);
       background-size: 200% 100%;
       -webkit-background-clip: text;
       background-clip: text;
-      -webkit-text-fill-color: transparent;
+      -webkit-text-fill-color: transparent;`}
       background-position: -0% 0%;" class="current-lyric-color">${lyric.text}</div>
             </div>
     `).join('');
@@ -101,8 +106,27 @@ const renderNextLyrics = () => {
 }
 
 const setupUI = () => {
+    const html = `
+        <div id="ever-night" class="absolute bottom-0 translate-y-50 translate-x-100 -left-5 w-[200px] z-10 flex">
+            <img class="" src="gif-3.gif"/>
+            <img class="relative -left-10" src="gif-5.gif"/>
+            <img class="relative -left-25" src="gif-4.gif"/>
+            </div>
+    `
+    const divCreator = document.createElement('div')
+    divCreator.innerHTML = html;
+    const app = document.getElementById('app')
+    app.append(divCreator)
 
+    const discHtml = `<div id="disc-ever-night" class="absolute bottom-0 left-[50%] -translate-x-1/2 translate-y-[190px] w-[200px]">
+        <img src="gif-2-transparent.gif"/>
+    </div>`;
+    const divDiscCreator = document.createElement("div");
+    divDiscCreator.innerHTML = discHtml;
+    const discEl = document.getElementById('disc');
+    discEl.append(divDiscCreator)
 }
+
 
 renderNextLyrics();
 renderLyrics();
